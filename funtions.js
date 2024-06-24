@@ -178,6 +178,22 @@ var numPar = function (num) {
     }
     return "".concat(arrNums);
 };
+//// Reto 4
+var tabMultiplicar = function (num) {
+    var arrNumMult = [];
+    for (var i = 1; i <= 12; i++) {
+        arrNumMult.push("".concat(num, " x ").concat(i, " = ").concat(i * num));
+    }
+    return arrNumMult;
+};
+//// Reto 5
+var treeSimbol = function (simbol) {
+    var simbols = "";
+    for (var i = 0; i < 10; i++) {
+        console.log(simbols += simbol);
+    }
+    return "||";
+};
 module.exports = {
     ///// Codicionales
     multiplos: multiplos,
@@ -198,4 +214,6 @@ module.exports = {
     bucleNums: bucleNums,
     countNum: countNum,
     numPar: numPar,
+    tabMultiplicar: tabMultiplicar,
+    treeSimbol: treeSimbol
 };

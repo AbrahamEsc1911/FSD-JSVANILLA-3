@@ -80,3 +80,8 @@ console.log(allFuntions.numPar(23))
 console.log(allFuntions.numPar(12))
 console.log(allFuntions.numPar(17.54))
 console.log(allFuntions.numPar(-2))
+
+console.log(allFuntions.tabMultiplicar(7))
+console.log(allFuntions.tabMultiplicar(4))
+
+console.log(allFuntions.treeSimbol("*"))
