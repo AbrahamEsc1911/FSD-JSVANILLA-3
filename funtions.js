@@ -56,7 +56,68 @@ var numRamdon = function () {
 };
 //// Reto 8
 var grades = function (num1, num2, num3) {
-    return (num1 + num2 + num3) / 3 > 5 ? "Ha Aprovado con una calificacion promedio de".concat(((num1 + num2 + num3) / 3).toFixed(2)) : "No ha Aprovado, la calificaci\u00F3n promedio es ".concat(((num1 + num2 + num3) / 3).toFixed(2));
+    return (num1 + num2 + num3) / 3 > 5 ? "Ha Aprovado con una calificacion promedio de ".concat(((num1 + num2 + num3) / 3).toFixed(2)) : "No ha Aprovado, la calificaci\u00F3n promedio es ".concat(((num1 + num2 + num3) / 3).toFixed(2));
+};
+//// Reto 9
+var autosDes = function (str) {
+    var strToLower = str.toString().toLowerCase();
+    var promo;
+    switch (strToLower) {
+        case "ford fiesta":
+            promo = "El descuento es del 5%";
+            break;
+        case "ford focus":
+            promo = "El descuento es del 10%";
+            break;
+        default:
+            promo = "Este vehiculo no tiene descuento";
+            break;
+    }
+    return promo;
+};
+//// Reto 10
+var dayMonts = function (num) {
+    var nameMont;
+    switch (num) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            nameMont = "Este mes tiene 31 días";
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            nameMont = "Este mes tiene 30 días";
+            break;
+        case 2:
+            nameMont = "Este mes tiene 28 dias, si no es bisiesto.";
+            break;
+        default:
+            nameMont = "Indica un valor valido entre 1 y 12";
+            break;
+    }
+    return nameMont;
+};
+//// Reto 11
+var ruedaSize = function (diametro) {
+    if (diametro > 1.4) {
+        return "La rueda es para un vehiculo grande";
+    }
+    else if (diametro <= 1.4 && diametro > 0.8) {
+        return "La rueda es para un vehiculo mediano";
+    }
+    return "La rueda es para un vechiculo peque\u00F1o";
+};
+var ruedaDiam = function (diametro, grosor) {
+    if ((diametro > 1.4 && grosor < 0.4) || diametro <= 1.4 && diametro > 0.8 && grosor < 0.25) {
+        return "El grosor para esta rueda es inferior al recomendado";
+    }
+    return "El grosor para esta rueda est\u00E1 correcto";
 };
 module.exports = {
     multiplos: multiplos,
@@ -68,4 +129,8 @@ module.exports = {
     strToLower: strToLower,
     numRamdon: numRamdon,
     grades: grades,
+    autosDes: autosDes,
+    dayMonts: dayMonts,
+    ruedaSize: ruedaSize,
+    ruedaDiam: ruedaDiam,
 };

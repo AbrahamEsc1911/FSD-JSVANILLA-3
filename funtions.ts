@@ -56,7 +56,7 @@ const strToLower = (str : string) : string => {
        if(arrStr[i] !== arrStr[i].toLowerCase()) {
         strCheck.push(arrStr[i])
        } 
-    } return `El string ${str} contiene algunas mayusculas: ${strCheck.join(",")}`
+    } return `El string ${str} contiene algunas mayusculas: ${strCheck.join(",")}`;
 }
 
 
@@ -64,7 +64,7 @@ const strToLower = (str : string) : string => {
 
 const numRamdon = () : string => {
     const numRam : number = Math.round(Math.random() * (20 - 1) + 1)
-    return numRam % 2 === 0 ? `El ${numRam} es par` : `El ${numRam} no es par`
+    return numRam % 2 === 0 ? `El ${numRam} es par` : `El ${numRam} no es par`;
 }
 
 //// Reto 8
@@ -73,6 +73,70 @@ const grades = (num1 : number, num2 : number, num3 : number) : string => {
     return (num1 + num2 + num3) / 3 > 5 ? `Ha Aprovado con una calificacion promedio de ${((num1 + num2 + num3) / 3).toFixed(2)}` : `No ha Aprovado, la calificación promedio es ${((num1 + num2 + num3) / 3).toFixed(2)}`
 }
 
+//// Reto 9
+
+const autosDes = (str: string) : string => {
+    const strToLower : string = str.toString().toLowerCase();
+    let promo : string;
+
+    switch(strToLower){
+        case "ford fiesta":
+            promo = "El descuento es del 5%"
+        break;
+        case "ford focus":
+            promo = "El descuento es del 10%"
+        break;
+        default:
+            promo = "Este vehiculo no tiene descuento"
+            break;
+    } return promo;
+}
+
+//// Reto 10
+
+const dayMonts = (num : number) : string => {
+    let nameMont : string;
+
+    switch(num){
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            nameMont = "Este mes tiene 31 días"
+        break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            nameMont = "Este mes tiene 30 días"
+        break;
+        case 2:
+            nameMont = "Este mes tiene 28 dias, si no es bisiesto."
+        break;
+        default:
+            nameMont = "Indica un valor valido entre 1 y 12"
+            break;
+    } return nameMont;
+}
+
+//// Reto 11
+
+const ruedaSize = (diametro : number) : string => {
+    if(diametro > 1.4){
+        return `La rueda es para un vehiculo grande`
+    } else if(diametro <= 1.4 && diametro > 0.8){
+        return `La rueda es para un vehiculo mediano`
+    } return `La rueda es para un vechiculo pequeño`
+}
+
+const ruedaDiam = (diametro : number, grosor : number) : string => {
+    if((diametro > 1.4 && grosor < 0.4) || diametro <= 1.4 && diametro > 0.8 && grosor < 0.25){
+        return `El grosor para esta rueda es inferior al recomendado`
+    } return `El grosor para esta rueda está correcto`
+}
 
 
 module.exports = {
@@ -85,7 +149,10 @@ module.exports = {
     strToLower,
     numRamdon,
     grades,
-
+    autosDes,
+    dayMonts,
+    ruedaSize,
+    ruedaDiam,
 }
 
 
