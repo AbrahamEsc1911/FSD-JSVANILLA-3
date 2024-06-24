@@ -41,12 +41,51 @@ const promNum = (num1: number, num2 : number, num3 : number) : string => {
 
 //// Reto 6
 
+const strLowerCase = (str : string) : boolean => {
+    const strToLower : string = str.toString().toLowerCase()
+    return str === strToLower ? true : false
+}
+
+const strToLower = (str : string) : string => {
+    const strCheck : string[] = []
+    const arrStr : string[] = Array.from(str)
+    if(str === str.toString().toLowerCase()){
+        return `En el string ${str} todas son minusculas`
+    }
+    for(let i = 0; i < arrStr.length; i++){
+       if(arrStr[i] !== arrStr[i].toLowerCase()) {
+        strCheck.push(arrStr[i])
+       } 
+    } return `El string ${str} contiene algunas mayusculas: ${strCheck.join(",")}`
+}
+
+
+//// Reto 7
+
+const numRamdon = () : string => {
+    const numRam : number = Math.round(Math.random() * (20 - 1) + 1)
+    return numRam % 2 === 0 ? `El ${numRam} es par` : `El ${numRam} no es par`
+}
+
+//// Reto 8
+
+const grades = (num1 : number, num2 : number, num3 : number) : string => {
+    return (num1 + num2 + num3) / 3 > 5 ? `Ha Aprovado con una calificacion promedio de ${((num1 + num2 + num3) / 3).toFixed(2)}` : `No ha Aprovado, la calificación promedio es ${((num1 + num2 + num3) / 3).toFixed(2)}`
+}
+
+
+
 module.exports = {
     multiplos,
     greatest,
     ifNum,
     strLength,
     promNum,
+    strLowerCase,
+    strToLower,
+    numRamdon,
+    grades,
+
 }
 
 

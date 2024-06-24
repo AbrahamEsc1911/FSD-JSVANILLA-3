@@ -22,3 +22,18 @@ console.log(allFuntions.promNum(3, 5, 6))
 console.log(allFuntions.promNum(5, 5, 6))
 console.log(allFuntions.promNum(-5, -5, 6))
 console.log(allFuntions.promNum(8, 8, 1))
+
+console.log(allFuntions.strLowerCase("SAndalIa"))
+console.log(allFuntions.strLowerCase("sandalia"))
+console.log(allFuntions.strLowerCase("SANDALIA"))
+
+console.log(allFuntions.strToLower("SANDALIA"))
+console.log(allFuntions.strToLower("sandalia"))
+console.log(allFuntions.strToLower("SanDaLiA"))
+
+console.log(allFuntions.numRamdon())
+console.log(allFuntions.numRamdon())
+
+console.log(allFuntions.grades(6.5, 7.2, 4))
+console.log(allFuntions.grades(8.5, 8.2, 6.8))
+console.log(allFuntions.grades(4.5, 3.2, 2.1))
