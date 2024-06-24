@@ -1,4 +1,6 @@
-////VANILLA III
+"use strict";
+////VANILLA III - CONDICIONALES
+Object.defineProperty(exports, "__esModule", { value: true });
 //// Reto 1
 var multiplos = function (num1, num2) {
     return num1 % num2 === 0 ? true : false;
@@ -119,6 +121,32 @@ var ruedaDiam = function (diametro, grosor) {
     }
     return "El grosor para esta rueda est\u00E1 correcto";
 };
+//// Reto 12
+var priceAuto = function (vehiculo, km) {
+    var vehiculoTLC = vehiculo.toString().toLowerCase();
+    var prCoche = 0.10;
+    var prMoto = 0.20;
+    var prAutobus = 0.05;
+    var aPagar;
+    if (km < 0) {
+        return aPagar = "La cantidad en kms no puede ser menor a 0";
+    }
+    switch (vehiculoTLC) {
+        case "coche":
+            aPagar = "Vehiculo: ".concat(vehiculo, ", El total a pagar es ").concat(km * prCoche);
+            break;
+        case "moto":
+            aPagar = "Vehiculo: ".concat(vehiculo, ", El total a pagar es ").concat(km * prMoto);
+            break;
+        case "autobus":
+            aPagar = "Vehiculo: ".concat(vehiculo, ", El total a pagar es ").concat(km * prAutobus);
+            break;
+        default:
+            aPagar = "pro favor ingresa un vehiculo valido, o un km valido";
+            break;
+    }
+    return aPagar;
+};
 module.exports = {
     multiplos: multiplos,
     greatest: greatest,
@@ -133,4 +161,5 @@ module.exports = {
     dayMonts: dayMonts,
     ruedaSize: ruedaSize,
     ruedaDiam: ruedaDiam,
+    priceAuto: priceAuto,
 };

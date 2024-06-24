@@ -56,3 +56,8 @@ console.log(allFuntions.ruedaSize(0.45))
 
 console.log(allFuntions.ruedaDiam(2.0, 0.3))
 console.log(allFuntions.ruedaDiam(1.3, 0.7))
+
+console.log(allFuntions.priceAuto("coche", 25))
+console.log(allFuntions.priceAuto("moto", 25))
+console.log(allFuntions.priceAuto("autobUS", 25))
+console.log(allFuntions.priceAuto("COchE", -25))

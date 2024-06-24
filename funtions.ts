@@ -1,4 +1,6 @@
-////VANILLA III
+////VANILLA III - CONDICIONALES
+
+import { visitEachChild } from "typescript";
 
 //// Reto 1
 
@@ -138,6 +140,34 @@ const ruedaDiam = (diametro : number, grosor : number) : string => {
     } return `El grosor para esta rueda está correcto`
 }
 
+//// Reto 12
+
+const priceAuto = (vehiculo : string, km : number) : string => {
+    const vehiculoTLC : string = vehiculo.toString().toLowerCase()
+    const prCoche : number = 0.10;
+    const prMoto : number = 0.20;
+    const prAutobus : number = 0.05;
+    let aPagar : string;
+    if(km < 0){
+       return aPagar = "La cantidad en kms no puede ser menor a 0"
+    }
+
+    switch(vehiculoTLC){
+        case "coche":
+            aPagar = `Vehiculo: ${vehiculo}, El total a pagar es ${km * prCoche}`;
+        break;
+        case "moto":
+            aPagar = `Vehiculo: ${vehiculo}, El total a pagar es ${km * prMoto}`;
+        break;
+        case "autobus":
+            aPagar = `Vehiculo: ${vehiculo}, El total a pagar es ${km * prAutobus}`;
+        break;
+        default:
+            aPagar = `pro favor ingresa un vehiculo valido, o un km valido`;
+            break;
+    } return aPagar;
+}
+
 
 module.exports = {
     multiplos,
@@ -153,6 +183,5 @@ module.exports = {
     dayMonts,
     ruedaSize,
     ruedaDiam,
+    priceAuto,
 }
-
-
