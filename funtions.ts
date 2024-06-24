@@ -1,6 +1,6 @@
 ////VANILLA III - CONDICIONALES
 
-import { visitEachChild } from "typescript";
+import { NumericLiteral, visitEachChild } from "typescript";
 
 //// Reto 1
 
@@ -168,8 +168,46 @@ const priceAuto = (vehiculo : string, km : number) : string => {
     } return aPagar;
 }
 
+////VANILLA III - BUCLES
+
+//// Reto 1
+
+const bucleNums = (num : number) : string => {
+    let arrNum : number[] = []
+    if(!Number.isInteger(num) || num < 1){
+        return `numero no válido`
+    }
+    for(let i = 0; i <= num; i++){
+        arrNum.push(i)
+    } return `${arrNum.join(",")}`
+}
+
+//// Reto 2
+const countNum = (numN : number, numM : number) : number[] => {
+    let arrNum : number[] = []
+    for(let i = 0; i < numM; i += numN){
+        arrNum.push(i)
+    } return arrNum;
+}
+
+//// Reto 3
+const numPar = (num : number): string => {
+    let arrNums : number[] = [];
+    if(num <= 0){
+        return `Numero negativo`
+    }
+    for(let i = 0; i < num; i++){
+        i % 2 === 0 ? arrNums.push(i) : null;
+    } return `${arrNums}`;
+}
+
+//// Reto 4
+
+
+
 
 module.exports = {
+    ///// Codicionales
     multiplos,
     greatest,
     ifNum,
@@ -184,4 +222,8 @@ module.exports = {
     ruedaSize,
     ruedaDiam,
     priceAuto,
+    //////// bucles
+    bucleNums,
+    countNum,
+    numPar,
 }

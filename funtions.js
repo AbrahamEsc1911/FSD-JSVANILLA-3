@@ -147,7 +147,39 @@ var priceAuto = function (vehiculo, km) {
     }
     return aPagar;
 };
+////VANILLA III - BUCLES
+//// Reto 1
+var bucleNums = function (num) {
+    var arrNum = [];
+    if (!Number.isInteger(num) || num < 1) {
+        return "numero no v\u00E1lido";
+    }
+    for (var i = 0; i <= num; i++) {
+        arrNum.push(i);
+    }
+    return "".concat(arrNum.join(","));
+};
+//// Reto 2
+var countNum = function (numN, numM) {
+    var arrNum = [];
+    for (var i = 0; i < numM; i += numN) {
+        arrNum.push(i);
+    }
+    return arrNum;
+};
+//// Reto 3
+var numPar = function (num) {
+    var arrNums = [];
+    if (num <= 0) {
+        return "Numero negativo";
+    }
+    for (var i = 0; i < num; i++) {
+        i % 2 === 0 ? arrNums.push(i) : null;
+    }
+    return "".concat(arrNums);
+};
 module.exports = {
+    ///// Codicionales
     multiplos: multiplos,
     greatest: greatest,
     ifNum: ifNum,
@@ -162,4 +194,8 @@ module.exports = {
     ruedaSize: ruedaSize,
     ruedaDiam: ruedaDiam,
     priceAuto: priceAuto,
+    //////// bucles
+    bucleNums: bucleNums,
+    countNum: countNum,
+    numPar: numPar,
 };
