@@ -194,6 +194,39 @@ var treeSimbol = function (simbol) {
     }
     return "||";
 };
+//// Reto 6
+var sumIntPos = function (num) {
+    var sumAll = 0;
+    var numU = Math.round(num);
+    if (num <= 0) {
+        return "El numero no puede ser 0 o menor.";
+    }
+    for (var i = 0; i < numU; i++) {
+        sumAll += i;
+    }
+    return "".concat(sumAll);
+};
+///// Reto 7
+var esPrime = function (num) {
+    if (num <= 1) {
+        return false;
+    }
+    for (var i = 2; i < num; i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+};
+var primeNums = function (num) {
+    var numArr = [];
+    for (var i = 0; i <= num; i++) {
+        if (esPrime(i)) {
+            numArr.push(i);
+        }
+    }
+    return numArr;
+};
 module.exports = {
     ///// Codicionales
     multiplos: multiplos,
@@ -215,5 +248,8 @@ module.exports = {
     countNum: countNum,
     numPar: numPar,
     tabMultiplicar: tabMultiplicar,
-    treeSimbol: treeSimbol
+    treeSimbol: treeSimbol,
+    sumIntPos: sumIntPos,
+    esPrime: esPrime,
+    primeNums: primeNums,
 };

@@ -213,33 +213,74 @@ const tabMultiplicar = (num: number): string[] => {
 
 //// Reto 5
 
-const treeSimbol = (simbol : string) : string => {
-    let simbols : string = "";
-    for(let i = 0; i < 10; i++){
+const treeSimbol = (simbol: string): string => {
+    let simbols: string = "";
+    for (let i = 0; i < 10; i++) {
         console.log(simbols += simbol)
     } return "||";
 }
 
-module.exports = {
-    ///// Codicionales
-    multiplos,
-    greatest,
-    ifNum,
-    strLength,
-    promNum,
-    strLowerCase,
-    strToLower,
-    numRamdon,
-    grades,
-    autosDes,
-    dayMonts,
-    ruedaSize,
-    ruedaDiam,
-    priceAuto,
-    //////// bucles
-    bucleNums,
-    countNum,
-    numPar,
-    tabMultiplicar,
-    treeSimbol
+//// Reto 6
+
+const sumIntPos = (num: number): string => {
+    let sumAll: number = 0;
+    let numU: number = Math.round(num)
+    if (num <= 0) {
+        return `El numero no puede ser 0 o menor.`
+    }
+    for (let i = 0; i < numU; i++) {
+        sumAll += i
+    } return `${sumAll}`;
 }
+
+///// Reto 7
+
+const esPrime = (num : number) : boolean => {
+    if(num <= 1) {
+        return false;
+    }
+    for(let i = 2; i < num; i++){
+        if(num % i === 0){
+            return false;
+        }
+    } return true;
+}
+
+
+const primeNums = (num: number): number[] => {
+    let numArr : number[] = []
+    for(let i = 0; i <= num; i++){
+        if(esPrime(i)){
+            numArr.push(i)
+        }
+    } return numArr;
+}
+
+
+
+    module.exports = {
+        ///// Codicionales
+        multiplos,
+        greatest,
+        ifNum,
+        strLength,
+        promNum,
+        strLowerCase,
+        strToLower,
+        numRamdon,
+        grades,
+        autosDes,
+        dayMonts,
+        ruedaSize,
+        ruedaDiam,
+        priceAuto,
+        //////// bucles
+        bucleNums,
+        countNum,
+        numPar,
+        tabMultiplicar,
+        treeSimbol,
+        sumIntPos,
+        esPrime,
+        primeNums,
+    }

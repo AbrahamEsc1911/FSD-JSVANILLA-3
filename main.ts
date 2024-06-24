@@ -84,4 +84,12 @@ console.log(allFuntions.numPar(-2))
 console.log(allFuntions.tabMultiplicar(7))
 console.log(allFuntions.tabMultiplicar(4))
 
-console.log(allFuntions.treeSimbol("*"))
+console.log(allFuntions.treeSimbol("@"))
+
+console.log(allFuntions.sumIntPos(10))
+console.log(allFuntions.sumIntPos(0))
+console.log(allFuntions.sumIntPos(-3))
+console.log(allFuntions.sumIntPos(12.1))
+
+console.log(allFuntions.primeNums(21))
+console.log(allFuntions.primeNums(7))
