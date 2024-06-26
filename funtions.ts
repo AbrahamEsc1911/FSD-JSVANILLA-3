@@ -1,5 +1,7 @@
 ////VANILLA III - CONDICIONALES
 
+import { parse } from "path";
+import { stringify } from "querystring";
 import { NumericLiteral, resolveTypeReferenceDirective, visitEachChild } from "typescript";
 
 //// Reto 1
@@ -235,12 +237,12 @@ const sumIntPos = (num: number): string => {
 
 ///// Reto 7
 
-const esPrime = (num : number) : boolean => {
-    if(num <= 1) {
+const esPrime = (num: number): boolean => {
+    if (num <= 1) {
         return false;
     }
-    for(let i = 2; i < num; i++){
-        if(num % i === 0){
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
             return false;
         }
     } return true;
@@ -248,39 +250,90 @@ const esPrime = (num : number) : boolean => {
 
 
 const primeNums = (num: number): number[] => {
-    let numArr : number[] = []
-    for(let i = 0; i <= num; i++){
-        if(esPrime(i)){
+    let numArr: number[] = []
+    for (let i = 0; i <= num; i++) {
+        if (esPrime(i)) {
             numArr.push(i)
         }
     } return numArr;
 }
 
+//// Reto 8
 
+const countdown = (num1: number, num2: number): number[] => {
+    let arrNums: number[] = []
+    if (num1 > num2) {
+        for (let i = num1; i >= num2; i--) {
+            arrNums.push(i)
+        }
+    } for (let x = num2; x >= num1; x--) {
+        arrNums.push(x)
+    } return arrNums;
+}
 
-    module.exports = {
-        ///// Codicionales
-        multiplos,
-        greatest,
-        ifNum,
-        strLength,
-        promNum,
-        strLowerCase,
-        strToLower,
-        numRamdon,
-        grades,
-        autosDes,
-        dayMonts,
-        ruedaSize,
-        ruedaDiam,
-        priceAuto,
-        //////// bucles
-        bucleNums,
-        countNum,
-        numPar,
-        tabMultiplicar,
-        treeSimbol,
-        sumIntPos,
-        esPrime,
-        primeNums,
+//// Reto 9
+
+const multi3 = (num1: number, num2: number, num3: number, num4: number, num5: number): number[] => {
+    const arraNums: number[] = [num1, num2, num3, num4, num5];
+    let newArrNums: number[] = arraNums.map((element: number) => { return element * 3 })
+    return newArrNums;
+}
+
+////VANILLA III - FUNCIONES
+
+//// Reto 1
+
+const celsToFahrenheit = (n: number): string => {
+    return `${n} grados C son ${(n * 1.8) + 32} grados F`
+}
+
+//// Reto 2
+
+const checkDNI = (dni: string): string => {
+    const num : string = dni.slice(0, 8);
+    const letter : string = dni.slice(8)
+    const lettersDNI : string = "TRWAGMYFPDXBNJZSQVHLCKE"
+    const numI : number = parseInt(num, 10) % 23
+    const letterIndx : string = lettersDNI.charAt(numI)
+
+    if(dni.length != 9){
+        return `su DNI no es valido`
     }
+
+    if(letter === letterIndx){
+        return `Su DNI es correcto`
+    } return `Su DNI no es correcto`
+  
+}
+
+module.exports = {
+    ///// Codicionales
+    multiplos,
+    greatest,
+    ifNum,
+    strLength,
+    promNum,
+    strLowerCase,
+    strToLower,
+    numRamdon,
+    grades,
+    autosDes,
+    dayMonts,
+    ruedaSize,
+    ruedaDiam,
+    priceAuto,
+    //////// bucles
+    bucleNums,
+    countNum,
+    numPar,
+    tabMultiplicar,
+    treeSimbol,
+    sumIntPos,
+    esPrime,
+    primeNums,
+    countdown,
+    multi3,
+    //////// Funtions
+    celsToFahrenheit,
+    checkDNI,
+}

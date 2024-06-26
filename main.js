@@ -46,23 +46,36 @@ var allFuntions = require("./funtions");
 // console.log(allFuntions.priceAuto("autobUS", 25))
 // console.log(allFuntions.priceAuto("COchE", -25))
 //// VANILLA III - BUCLES
-console.log(allFuntions.bucleNums(12));
-console.log(allFuntions.bucleNums(3));
-console.log(allFuntions.bucleNums(-1));
-console.log(allFuntions.bucleNums(1.23));
-console.log(allFuntions.countNum(5, 100));
-console.log(allFuntions.countNum(6, 40));
-console.log(allFuntions.countNum(2, 25));
-console.log(allFuntions.numPar(23));
-console.log(allFuntions.numPar(12));
-console.log(allFuntions.numPar(17.54));
-console.log(allFuntions.numPar(-2));
-console.log(allFuntions.tabMultiplicar(7));
-console.log(allFuntions.tabMultiplicar(4));
-console.log(allFuntions.treeSimbol("@"));
-console.log(allFuntions.sumIntPos(10));
-console.log(allFuntions.sumIntPos(0));
-console.log(allFuntions.sumIntPos(-3));
-console.log(allFuntions.sumIntPos(12.1));
-console.log(allFuntions.primeNums(21));
-console.log(allFuntions.primeNums(7));
+// console.log(allFuntions.bucleNums(12))
+// console.log(allFuntions.bucleNums(3))
+// console.log(allFuntions.bucleNums(-1))
+// console.log(allFuntions.bucleNums(1.23))
+// console.log(allFuntions.countNum(5, 100))
+// console.log(allFuntions.countNum(6, 40))
+// console.log(allFuntions.countNum(2, 25))
+// console.log(allFuntions.numPar(23))
+// console.log(allFuntions.numPar(12))
+// console.log(allFuntions.numPar(17.54))
+// console.log(allFuntions.numPar(-2))
+// console.log(allFuntions.tabMultiplicar(7))
+// console.log(allFuntions.tabMultiplicar(4))
+// console.log(allFuntions.treeSimbol("@"))
+// console.log(allFuntions.sumIntPos(10))
+// console.log(allFuntions.sumIntPos(0))
+// console.log(allFuntions.sumIntPos(-3))
+// console.log(allFuntions.sumIntPos(12.1))
+// console.log(allFuntions.primeNums(21))
+// console.log(allFuntions.primeNums(7))
+// console.log(allFuntions.countdown(45, 32))
+// console.log(allFuntions.countdown(12, 24))
+// console.log(allFuntions.multi3(2, 3, 4, 3, 1))
+// console.log(allFuntions.multi3(4, 7, 12, 1, 4))
+// console.log(allFuntions.multi3(0, 1, 4, -2, 4))
+//// VANILLA III - FUNTIONS
+console.log(allFuntions.celsToFahrenheit(0));
+console.log(allFuntions.celsToFahrenheit(20));
+console.log(allFuntions.celsToFahrenheit(34.4));
+console.log(allFuntions.checkDNI("19462026R"));
+console.log(allFuntions.checkDNI("1946226R"));
+console.log(allFuntions.checkDNI("19462026RT"));
+console.log(allFuntions.checkDNI("19462026T"));

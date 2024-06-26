@@ -227,6 +227,45 @@ var primeNums = function (num) {
     }
     return numArr;
 };
+//// Reto 8
+var countdown = function (num1, num2) {
+    var arrNums = [];
+    if (num1 > num2) {
+        for (var i = num1; i >= num2; i--) {
+            arrNums.push(i);
+        }
+    }
+    for (var x = num2; x >= num1; x--) {
+        arrNums.push(x);
+    }
+    return arrNums;
+};
+//// Reto 9
+var multi3 = function (num1, num2, num3, num4, num5) {
+    var arraNums = [num1, num2, num3, num4, num5];
+    var newArrNums = arraNums.map(function (element) { return element * 3; });
+    return newArrNums;
+};
+////VANILLA III - FUNCIONES
+//// Reto 1
+var celsToFahrenheit = function (n) {
+    return "".concat(n, " grados C son ").concat((n * 1.8) + 32, " grados F");
+};
+//// Reto 2
+var checkDNI = function (dni) {
+    var num = dni.slice(0, 8);
+    var letter = dni.slice(8);
+    var lettersDNI = "TRWAGMYFPDXBNJZSQVHLCKE";
+    var numI = parseInt(num, 10) % 23;
+    var letterIndx = lettersDNI.charAt(numI);
+    if (dni.length != 9) {
+        return "su DNI no es valido";
+    }
+    if (letter === letterIndx) {
+        return "Su DNI es correcto";
+    }
+    return "Su DNI no es correcto";
+};
 module.exports = {
     ///// Codicionales
     multiplos: multiplos,
@@ -252,4 +291,9 @@ module.exports = {
     sumIntPos: sumIntPos,
     esPrime: esPrime,
     primeNums: primeNums,
+    countdown: countdown,
+    multi3: multi3,
+    //////// Funtions
+    celsToFahrenheit: celsToFahrenheit,
+    checkDNI: checkDNI,
 };
