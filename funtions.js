@@ -261,10 +261,68 @@ var checkDNI = function (dni) {
     if (dni.length != 9) {
         return "su DNI no es valido";
     }
-    if (letter === letterIndx) {
-        return "Su DNI es correcto";
+    return letter === letterIndx ? "Su DNI es correcto" : "Su DNI no es correcto";
+};
+//// Reto 3
+var vocalOConsonante = function (str) {
+    // let msj: string = "";
+    var strLC = str.toString().toLowerCase();
+    if (str.length != 1) {
+        return "por favor ingrese solo 1 letra";
     }
-    return "Su DNI no es correcto";
+    ;
+    // switch (strLC) {
+    //     case "a":
+    //     case "e":
+    //     case "i":
+    //     case "o":
+    //     case "u":
+    //         msj = `${str} es una vocal`
+    //         break;
+    //     default:
+    //         msj = `${str} es una consonante`
+    //         break;
+    // } return msj;
+    if (strLC === "a" || strLC === "e" || strLC === "i" || strLC === "o" || strLC === "u") {
+        return "".concat(str, " es una vocal");
+    }
+    return "".concat(str, " es una consonante");
+};
+//// Reto 4
+var converStr = function (str) {
+    var strTL = str.toString().toLowerCase();
+    var strArr = Array.from(strTL);
+    var newArrStr = [];
+    for (var i = 0; i < strArr.length; i++) {
+        if (strArr[i] === "a") {
+            newArrStr.push("4");
+        }
+        else if (strArr[i] === "e") {
+            newArrStr.push("3");
+        }
+        else if (strArr[i] === "i") {
+            newArrStr.push("1");
+        }
+        else if (strArr[i] === "o") {
+            newArrStr.push("0");
+        }
+        else {
+            newArrStr.push(str.charAt(i));
+        }
+    }
+    return newArrStr.join("");
+};
+//// Reto 5
+var countChar = function (str1, letter) {
+    var count = 0;
+    var strLC = str1.toString().toLowerCase();
+    var letterLC = letter.toString().toLowerCase();
+    for (var i = 0; i < str1.length; i++) {
+        if (strLC.charAt(i) === letterLC) {
+            count += 1;
+        }
+    }
+    return "en la palabra ".concat(str1, " la letra ").concat(letter, ", est\u00E1 ").concat(count, " veces.");
 };
 module.exports = {
     ///// Codicionales
@@ -296,4 +354,7 @@ module.exports = {
     //////// Funtions
     celsToFahrenheit: celsToFahrenheit,
     checkDNI: checkDNI,
+    vocalOConsonante: vocalOConsonante,
+    converStr: converStr,
+    countChar: countChar
 };

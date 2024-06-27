@@ -103,11 +103,24 @@ const allFuntions = require("./funtions")
 
 //// VANILLA III - FUNTIONS
 
-console.log(allFuntions.celsToFahrenheit(0))
-console.log(allFuntions.celsToFahrenheit(20))
-console.log(allFuntions.celsToFahrenheit(34.4))
+// console.log(allFuntions.celsToFahrenheit(0))
+// console.log(allFuntions.celsToFahrenheit(20))
+// console.log(allFuntions.celsToFahrenheit(34.4))
 
-console.log(allFuntions.checkDNI("19462026R"))
-console.log(allFuntions.checkDNI("1946226R"))
-console.log(allFuntions.checkDNI("19462026RT"))
-console.log(allFuntions.checkDNI("19462026T"))
+// console.log(allFuntions.checkDNI("19462026R"))
+// console.log(allFuntions.checkDNI("1946226R"))
+// console.log(allFuntions.checkDNI("19462026RT"))
+// console.log(allFuntions.checkDNI("19462026T"))
+
+// console.log(allFuntions.vocalOConsonante("F"))
+// console.log(allFuntions.vocalOConsonante("E"))
+// console.log(allFuntions.vocalOConsonante("a"))
+// console.log(allFuntions.vocalOConsonante("aa"))
+
+console.log(allFuntions.converStr("CarslItOos"))
+console.log(allFuntions.converStr("Cars"))
+console.log(allFuntions.converStr("mitomaNo"))
+
+console.log(allFuntions.countChar("Camilingis", "I"))
+console.log(allFuntions.countChar("DIPTongo", "O"))
+console.log(allFuntions.countChar("totorinos", "T"))

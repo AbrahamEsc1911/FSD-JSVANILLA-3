@@ -290,21 +290,80 @@ const celsToFahrenheit = (n: number): string => {
 //// Reto 2
 
 const checkDNI = (dni: string): string => {
-    const num : string = dni.slice(0, 8);
-    const letter : string = dni.slice(8)
-    const lettersDNI : string = "TRWAGMYFPDXBNJZSQVHLCKE"
-    const numI : number = parseInt(num, 10) % 23
-    const letterIndx : string = lettersDNI.charAt(numI)
+    const num: string = dni.slice(0, 8);
+    const letter: string = dni.slice(8)
+    const lettersDNI: string = "TRWAGMYFPDXBNJZSQVHLCKE"
+    const numI: number = parseInt(num, 10) % 23
+    const letterIndx: string = lettersDNI.charAt(numI)
 
-    if(dni.length != 9){
-        return `su DNI no es valido`
+    if (dni.length != 9) {
+        return `su DNI no es valido`;
     }
+    return letter === letterIndx ? `Su DNI es correcto` : `Su DNI no es correcto`;
 
-    if(letter === letterIndx){
-        return `Su DNI es correcto`
-    } return `Su DNI no es correcto`
-  
 }
+
+//// Reto 3
+const vocalOConsonante = (str: string): string => {
+    // let msj: string = "";
+    let strLC: string = str.toString().toLowerCase()
+
+    if (str.length != 1) {
+        return `por favor ingrese solo 1 letra`
+    };
+
+    // switch (strLC) {
+    //     case "a":
+    //     case "e":
+    //     case "i":
+    //     case "o":
+    //     case "u":
+    //         msj = `${str} es una vocal`
+    //         break;
+    //     default:
+    //         msj = `${str} es una consonante`
+    //         break;
+    // } return msj;
+
+    if (strLC === "a" || strLC === "e" || strLC === "i" || strLC === "o" || strLC === "u") {
+        return `${str} es una vocal`
+    } return `${str} es una consonante`
+}
+
+//// Reto 4
+const converStr = (str: string): string => {
+    let strTL: string = str.toString().toLowerCase();
+    let strArr: string[] = Array.from(strTL);
+    let newArrStr: string[] = []
+
+    for (let i = 0; i < strArr.length; i++) {
+        if (strArr[i] === "a") {
+            newArrStr.push("4")
+        } else if (strArr[i] === "e") {
+            newArrStr.push("3")
+        } else if (strArr[i] === "i") {
+            newArrStr.push("1")
+        } else if (strArr[i] === "o") {
+            newArrStr.push("0")
+        } else { newArrStr.push(str.charAt(i)) }
+
+    } return newArrStr.join("");
+}
+
+//// Reto 5
+const countChar = (str1: string, letter: string): string => {
+    let count: number = 0;
+    const strLC: string = str1.toString().toLowerCase()
+    const letterLC: string = letter.toString().toLowerCase()
+
+    for (let i = 0; i < str1.length; i++) {
+        if (strLC.charAt(i) === letterLC) {
+            count += 1;
+        }
+    }
+    return `en la palabra ${str1} la letra ${letter}, está ${count} veces.`
+}
+
 
 module.exports = {
     ///// Codicionales
@@ -336,4 +395,7 @@ module.exports = {
     //////// Funtions
     celsToFahrenheit,
     checkDNI,
+    vocalOConsonante,
+    converStr,
+    countChar
 }
