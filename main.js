@@ -89,3 +89,8 @@ console.log(allFuntions.converStr("mitomaNo"));
 console.log(allFuntions.countChar("Camilingis", "I"));
 console.log(allFuntions.countChar("DIPTongo", "O"));
 console.log(allFuntions.countChar("totorinos", "T"));
+console.log(allFuntions.arrNums([1, 5, 7, 7, 10]));
+console.log(allFuntions.arrNums([-2, 6, -323, 1212, 0]));
+console.log(allFuntions.arrNums([1.212, -1, 223, 12, 23]));
+console.log(allFuntions.arrNumSum([1, 5, 7, 3, 10]));
+console.log(allFuntions.arrNumSum([1, -43, 121, 0.4, 110]));

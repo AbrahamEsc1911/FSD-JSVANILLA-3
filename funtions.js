@@ -324,6 +324,24 @@ var countChar = function (str1, letter) {
     }
     return "en la palabra ".concat(str1, " la letra ").concat(letter, ", est\u00E1 ").concat(count, " veces.");
 };
+//// Reto 6
+var arrNums = function (nums) {
+    var numGra = 0;
+    for (var i = 0; i < nums.length; i++) {
+        if (nums[i] >= numGra) {
+            numGra = nums[i];
+        }
+    }
+    return numGra;
+};
+//// Reto 7
+var arrNumSum = function (numsArr) {
+    var containter = 0;
+    for (var i = 0; i < numsArr.length; i++) {
+        containter += numsArr[i];
+    }
+    return containter;
+};
 module.exports = {
     ///// Codicionales
     multiplos: multiplos,
@@ -356,5 +374,7 @@ module.exports = {
     checkDNI: checkDNI,
     vocalOConsonante: vocalOConsonante,
     converStr: converStr,
-    countChar: countChar
+    countChar: countChar,
+    arrNums: arrNums,
+    arrNumSum: arrNumSum
 };

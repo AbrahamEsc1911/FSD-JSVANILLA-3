@@ -364,6 +364,24 @@ const countChar = (str1: string, letter: string): string => {
     return `en la palabra ${str1} la letra ${letter}, está ${count} veces.`
 }
 
+//// Reto 6
+const arrNums = (nums: number[]): number => {
+    let numGra: number = 0;
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] >= numGra) {
+            numGra = nums[i]
+        }
+    } return numGra;
+}
+
+//// Reto 7
+
+const arrNumSum = (numsArr : number[]) : number =>{
+    let containter : number = 0;
+    for(let i = 0; i < numsArr.length; i++){
+        containter += numsArr[i]
+    } return containter;
+}
 
 module.exports = {
     ///// Codicionales
@@ -397,5 +415,7 @@ module.exports = {
     checkDNI,
     vocalOConsonante,
     converStr,
-    countChar
+    countChar,
+    arrNums,
+    arrNumSum
 }
